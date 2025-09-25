@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Rolar_dados.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+
+            <Label
+                Text="Rolamento de dados!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Picker
+                x:Name="QtdLados"
+                Title="Escolha seu Dado">
+
+                <Picker.Items>
+                    
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>4</x:String>
+                        <x:String>6</x:String>
+                        <x:String>10</x:String>
+                        <x:String>20</x:String>
+                        <x:String>100</x:String>
+                    </x:Array>
+                    
+                </Picker.Items>
+                
+            </Picker>
+
+            <Button
+                x:Name="RolarDadoBtn"
+                Text="Click me para rodar o seu dado." 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="RolarDadoBtn_Clicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
